@@ -21,6 +21,7 @@ class Objective(object):
         learning_rate = trial.suggest_float("learning_rate", 0.05, 0.3)
         subsample = trial.suggest_float("subsample", 0.75, 1)
         l2_leaf_reg = trial.suggest_float("l2_leaf_reg", 1e-5, 1e-1, log=True)
+        max_leaves = trial.suggest_int("max_leaves", 30, 200)
 
         params = {
             "loss_function": "RMSE",
@@ -28,6 +29,7 @@ class Objective(object):
             "learning_rate": learning_rate,
             "subsample": subsample,
             "l2_leaf_reg": l2_leaf_reg,
+            "max_leaves": max_leaves
         }
 
         cv_result = catboost.cv(
