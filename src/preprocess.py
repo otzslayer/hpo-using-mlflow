@@ -1,12 +1,10 @@
-from typing import List, Tuple
-
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
-
+from typing import Listm Tuple
 
 def identify_column_types(X: pd.DataFrame) -> Tuple[List, List]:
     num_cols = X.select_dtypes("number").columns.tolist()
