@@ -45,6 +45,7 @@ class Objective(object):
 
 
 def main():
+    print("Hello World, Wecome to hpo using optuna mlflow")
     parser = argparse.ArgumentParser(
         description="HPO Experiment Tracking using Optuna and MLflow."
     )
