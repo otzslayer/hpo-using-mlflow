@@ -18,6 +18,10 @@ def identify_column_types(X: pd.DataFrame) -> Tuple[List, List]:
 def make_preprocess_pipeline(
     num_cols: List[str], cat_cols: List[str]
 ) -> ColumnTransformer:
+    """
+    전처리 파이프라인 docstring 작성 필요
+    """
+
     num_processor = Pipeline(
         steps=[
             ("imputer", SimpleImputer(strategy="most_frequent")),
