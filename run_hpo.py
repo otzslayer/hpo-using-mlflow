@@ -72,7 +72,7 @@ def main():
 
     study = optuna.create_study(
         study_name="house_price_prediction",
-        direction="minimize",
+        direction="maximize",
         pruner=optuna.pruners.HyperbandPruner(max_resource="auto"),
     )
 
