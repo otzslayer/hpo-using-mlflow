@@ -1,6 +1,7 @@
 #amnduk 주석 수정
 import argparse
 
+import numpy as np
 import pandas as pd
 import optuna
 import catboost
